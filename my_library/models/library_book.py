@@ -30,6 +30,7 @@ class LibraryBook(models.Model):
         digits=(14, 4),  # Optional precision (total, decimals),
     )
     author_ids = fields.Many2many('res.partner', string='Authors')
+    cost_price = fields.Float('Book Cost', digits='Book Price')
 
     def name_get(self):
         """ This method used to customize display name of the record """
