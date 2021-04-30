@@ -10,6 +10,8 @@ class LibraryBook(models.Model):
     name = fields.Char('Title', required=True)
     date_release = fields.Date('Release Date')
     author_ids = fields.Many2many('res.partner', string='Authors')
+    category_id = fields.Many2one('library.book.category', string='Category')
+
     state = fields.Selection([
         ('draft', 'Unavailable'),
         ('available', 'Available'),
@@ -48,6 +50,28 @@ class LibraryBook(models.Model):
         library_member_model = self.env['library.member']  # This is an empty recordset of model library.member
         all_members = library_member_model.search([])
         print("ALL MEMBERS:", all_members)
+        return True
+
+
+    def create_categories(self):
+        categ1 = {
+            'name': 'Child category 1',
+            'description': 'Description for child 1'
+        }
+        categ2 = {
+            'name': 'Child category 2',
+            'description': 'Description for child 2'
+        }
+        parent_category_val = {
+            'name': 'Parent category',
+            'description': 'Description for parent category',
+            'child_ids': [
+                (0, 0, categ1),
+                (0, 0, categ2),
+            ]
+        }
+        # Total 3 records (1 parent and 2 child) will be craeted in library.book.category model
+        record = self.env['library.book.category'].create(parent_category_val)
         return True
 
 
