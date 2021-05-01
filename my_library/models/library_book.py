@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
+import logging
+
 from odoo import models, fields, api
 from odoo.exceptions import UserError
 from odoo.tools.translate import _
+
+logger = logging.getLogger(__name__)
+
 
 class LibraryBook(models.Model):
     _name = 'library.book'
@@ -78,6 +83,17 @@ class LibraryBook(models.Model):
         self.ensure_one()
         self.date_release = fields.Date.today()
 
+    def find_book(self):
+        domain = [
+            '|',
+                '&', ('name', 'ilike', 'Book Name'),
+                     ('category_id.name', '=', 'Category Name'),
+                '&', ('name', 'ilike', 'Book Name 2'),
+                     ('category_id.name', '=', 'Category Name 2')
+        ]
+        books = self.search(domain)
+        logger.info('Books found: %s', books)
+        return True
 
 class LibraryMember(models.Model):
 
