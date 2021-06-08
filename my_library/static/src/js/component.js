@@ -32,6 +32,26 @@ odoo.define('my.component', function (require) {
             this.state = useState({ currentIndex: 0 });
         }
 
+        async willStart() {
+            console.log('CALLED:> willStart');
+        }
+
+        mounted() {
+            console.log('CALLED:> mounted');
+        }
+
+        willPatch() {
+            console.log('CALLED:> willPatch');
+        }
+
+        patched() {
+            console.log('CALLED:> patched');
+        }
+
+        willUnmount() {
+            console.log('CALLED:> willUnmount');
+        }
+
         onRemove(ev) {
             this.destroy();
         }
