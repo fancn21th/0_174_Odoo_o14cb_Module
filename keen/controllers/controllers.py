@@ -4,10 +4,11 @@ from odoo import http
 
 class Keen(http.Controller):
 
-    @http.route('/keen/keen/', auth='public')
+    @http.route('/keen/keen/', auth='public', website=True)
     def index(self, **kw):
+        Teachers = http.request.env['keen.teachers']
         return http.request.render('keen.index', {
-            'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
+            'teachers': Teachers.search([])
         })
 
     # @http.route('/keen/keen/objects/', auth='public')
