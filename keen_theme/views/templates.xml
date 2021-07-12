@@ -1,39 +1,8 @@
 <odoo>
   <data>
-    <!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
-    <template id="footer_custom_inh" inherit_id="website.footer_custom">
-      <!-- Code to Hide Default Website Footer Of Odoo -->
-      <xpath expr="//div[@id='footer']" position="attributes">
-        <attribute name="style">display:none !important;</attribute>
-      </xpath>
-      <!-- Code To Add New Customised Website Footer -->
-      <xpath expr="//div[@id='footer']" position="after">
-        <section class="s_text_block">
-          <div class="container">
-            <center style="background-color:green;">
-                            This is the simple footer design. Here you can add your style to beautify more.
-            </center>
-          </div>
-        </section>
+    <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+        <link rel="stylesheet" type="text/scss" href="/keen_theme/static/assets/plugins/global/plugins.bundle.css"/>
       </xpath>
     </template>
   </data>
