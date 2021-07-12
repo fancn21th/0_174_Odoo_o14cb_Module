@@ -5,5 +5,16 @@
         <link rel="stylesheet" type="text/scss" href="/keen_theme/static/assets/plugins/global/plugins.bundle.css"/>
       </xpath>
     </template>
+
+    <template id="custom_message" inherit_id="website.layout" name="Custom Header">
+      <!-- Add an element after the top menu  -->
+      <xpath expr="//div[@id='wrapwrap']/main" position="before">
+        <div class="container">
+          <div class="alert alert-info mt16" role="alert">
+            <strong>你好</strong> Alex Fan
+          </div>
+        </div>
+      </xpath>
+    </template>
   </data>
 </odoo>
