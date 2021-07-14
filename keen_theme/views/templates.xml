@@ -1,8 +1,8 @@
 <odoo>
   <data>
     <!-- assets -->
-    <template id="assets_frontend" name="My style" inherit_id="website.assets_frontend">
-      <xpath expr="link[last()]" position="after">
+    <template id="keen_theme_style" name="My Theme style" inherit_id="website.assets_frontend">
+      <xpath expr="//link[last()]" position="after">
         <!--begin::Fonts-->
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" /> -->
         <!--end::Fonts-->
@@ -23,8 +23,8 @@
 
     </template>
 
-    <!-- <template id="template_id" name="template_name">
-      <xpath expr="script[last()]" position="after">
+    <template id="keen_theme_script" name="My Theme Script" inherit_id="website.assets_frontend">
+      <xpath expr="//script[last()]" position="after">
 
         <script src="/keen_theme/static/custom/js/kt.app.settings.js"></script>
 
@@ -32,11 +32,11 @@
         <script src="/keen_theme/static/assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
         <script src="/keen_theme/static/assets/js/scripts.bundle.js"></script>
 
-        <script src="/keen_theme/static/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+        <!-- <script src="/keen_theme/static/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script> -->
 
         <script src="/keen_theme/static/assets/js/pages/widgets.js"></script>
       </xpath>
-    </template> -->
+    </template>
 
     <!-- content -->
     <template id="custom_message" inherit_id="website.layout" name="Custom Header">
