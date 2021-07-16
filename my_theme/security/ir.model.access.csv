@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_my__theme_my__theme,my__theme.my__theme,model_my__theme_my__theme,base.group_user,1,1,1,1
