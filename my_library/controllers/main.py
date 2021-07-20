@@ -10,3 +10,14 @@ class Main(http.Controller):
             'my_library.books', {
                 'books': request.env['library.book'].search([]),
             })
+
+    @http.route('/books/<model("library.book"):book>', type='http', auth="user", website=True)
+    def library_book_detail(self, book):
+        return request.render(
+            'my_library.book_detail', {
+                'book': book,
+            })
+
+    @http.route('/hi', type='http', auth='user')
+    def library_hi(self):
+        return 'hi'
