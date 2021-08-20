@@ -12,13 +12,15 @@ Description related to library.
     'category': 'Tools',
     'version': '14.0.1',
     'depends': ['base', 'website'],
-
+    'qweb': ['static/src/xml/counter.xml',],
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
         'views/library_book.xml',
         'views/templates.xml',
-        'views/snippets.xml'
+        'views/snippets.xml',
+        'views/assets.xml',
+        'views/views.xml',
     ],
 
     # This demo data files will be loaded if db initialize with demo data (commented because file is not added in this example)

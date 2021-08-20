@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="assets_backend" name="my_library assets" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+      <script type="text/javascript" src="/my_library/static/src/js/counter.js"></script>
+      <link rel="stylesheet" type="text/css" href="/my_library/static/src/scss/counter.scss"/>
+    </xpath>
+  </template>
+
+</odoo>

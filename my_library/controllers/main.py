@@ -17,7 +17,3 @@ class Main(http.Controller):
             'my_library.book_detail', {
                 'book': book,
             })
-
-    @http.route('/hi', type='http', auth='user')
-    def library_hi(self):
-        return 'hi'
