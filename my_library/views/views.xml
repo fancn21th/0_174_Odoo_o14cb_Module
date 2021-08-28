@@ -1,9 +1,0 @@
-<odoo>
-  <data>
-    <record id="action_count" model="ir.actions.client">
-      <field name="name">Tutorial Demo</field>
-      <field name="tag">my_library.action</field>
-    </record>
-    <menuitem name="Hello Count" id="my_library_menu_root" action="action_count"></menuitem>
-  </data>
-</odoo>
