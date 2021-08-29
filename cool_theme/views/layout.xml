@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="mylayout" inherit_id="website.layout" name="Custom Layout">
+    <xpath expr="//div[@id='wrapwrap']/main" position="replace">
+      <div class="container">
+        <div class="oe_structure dc-l-part dc-l-part--message" />
+      </div>
+    </xpath>
+  </template>
+
+</odoo>
