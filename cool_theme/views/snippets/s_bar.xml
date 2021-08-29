@@ -9,7 +9,7 @@
             <h3 class="card-label">bar</h3>
           </div>
         </div>
-        <div class="card-body">
+        <div class="card-body bar-body bar-body-red">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, amet. Quaerat magnam ut dolorum minus quod eum voluptatem ab blanditiis tenetur perferendis, facere tempora distinctio reprehenderit a deleniti quas repellendus corrupti maxime culpa obcaecati aliquam ipsa ea aspernatur. Laudantium aliquam, quos consequatur in accusamus illum possimus modi fugit ratione dicta.</p>
         </div>
       </div>
