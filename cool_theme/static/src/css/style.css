@@ -1,5 +1,5 @@
 .dc-l-part {
-  min-height: 50px;
+  min-height: 100px;
   position: relative;
 }
 
@@ -8,6 +8,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  line-height: 100px;
   border: 1px dashed gray;
   text-align: center;
 }
