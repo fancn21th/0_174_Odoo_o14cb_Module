@@ -11,9 +11,6 @@
   border: 1px dashed gray;
   text-align: center;
 }
-section ~ .dc-l-part__message {
-  display: none;
-}
 /* snippet options */
 .bar-body-red {
   color: red;
