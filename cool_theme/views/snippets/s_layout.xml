@@ -4,8 +4,8 @@
   <template id="s_layout_snippet" name="layout">
     <section>
       <div class="row">
-        <div class="col-6 oe_structure dc-l-part dc-l-part--message" />
-        <div class="col-6 oe_structure dc-l-part dc-l-part--message" />
+        <div class="col-6 oe_structure dc-l-part dc-l-part—message" />
+        <div class="col-6 oe_structure dc-l-part dc-l-part—message" />
       </div>
     </section>
   </template>

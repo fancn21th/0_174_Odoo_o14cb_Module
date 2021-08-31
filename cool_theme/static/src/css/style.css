@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.dc-l-part:empty.dc-l-part--message::before {
+.dc-l-part:empty.dc-l-part—message::before {
   content: "请放置区块";
   position: absolute;
   left: 0;
